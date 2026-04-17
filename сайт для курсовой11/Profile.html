@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="stylePRFL.css">
+</head>
+<body>
+    <!-- видео на фоне -->
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="fon.mp4" type="video/mp4">
+    </video>
+
+    <div class="site-content">
+        <!-- шапка сайта -->
+        <header>
+            <a href="index.html">
+                <div class="glass">
+                    <p class="Back">Back</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="home">
+                    <p class="Back">Gallary</p>
+                </div>
+            </a>
+            
+            <!-- бургер меню для мобилок -->
+            <div class="burger-menu" id="burgerMenu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+
+            <!-- кнопки входа -->
+            <div class="exit" id="exitMenu">
+                <a href="#">
+                    <div class="exx">
+                        <p class="Back">SIGN IN</p>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="exx">
+                        <p class="Back">LOG IN</p>
+                    </div>
+                </a>
+            </div>
+        </header>
+
+        <!-- галерея -->
+        <main class="gallery-section">
+            <div class="gallery-container">
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Сюда JS добавит фотки -->
+                </div>
+            </div>
+
+            <!-- кнопка загрузки -->
+            <div class="upload-section">
+                <input type="file" id="imageInput" accept="image/*" hidden>
+                <label for="imageInput" class="glass-btn upload-btn">Загрузить фото</label>
+                
+                <!-- поле со ссылкой -->
+                <div id="linkContainer" class="link-wrapper hidden">
+                    <input type="text" id="generatedLink" readonly placeholder="Ссылка на фото">
+                    <button id="copyBtn" class="glass-btn copy-btn">Копировать</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- модальное окно -->
+    <div class="gallery-modal" id="galleryModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modalImage" src="" alt="Gallery View">
+            <div class="modal-nav">
+                <button id="prevBtn" class="nav-btn">&#10094;</button>
+                <button id="nextBtn" class="nav-btn">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- всплывающие подсказки -->
+    <div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход / Регистрация</title>
+    <link rel="stylesheet" href="style11.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- фон регистрации -->
+    
+
+    <div class="site-content">
+        <header>
+            <a href="index.html">
+                <div class="glass">
+                    <p class="Back">Back</p>
+                </div>
+            </a>
+            <div class="home">
+                <p class="Back" id="authTitle">Register</p>
+            </div>
+            
+            <div class="exit">
+                <div class="exx auth-toggle" id="btnSignIn"><p class="Back">SIGN IN</p></div>
+                <div class="exx auth-toggle" id="btnLogIn"><p class="Back">LOG IN</p></div>
+            </div>
+        </header>
+
+        <main class="auth-main">
+            <!-- левая панель: форма -->
+            <div class="auth-glass auth-form">
+                <form id="authForm">
+                    <input type="text" id="inputName" class="auth-input" placeholder="Name:" required>
+                    <input type="password" id="inputPass" class="auth-input" placeholder="Password:" required>
+                    
+                    <!-- поля только для регистрации -->
+                    <div id="registerFields">
+                        <input type="password" id="inputPassConfirm" class="auth-input" placeholder="Enter Password:">
+                        <div class="input-row">
+                            <input type="email" id="inputGmail" class="auth-input" placeholder="Gmail:">
+                            <button type="button" class="input-btn">Enter</button>
+                        </div>
+                        <div class="input-row">
+                            <input type="text" id="inputCode" class="auth-input" placeholder="Code Gmail:">
+                            <button type="submit" class="input-btn submit-btn" id="submitBtn">Register</button>
+                        </div>
+                    </div>
+
+                    <!-- кнопка отправки для входа -->
+                    <button type="submit" class="auth-submit hidden" id="loginSubmit">Log In</button>
+                </form>
+            </div>
+
+            <!-- правая панель-->
+            <div class="auth-glass auth-social">
+                <button class="social-btn">VK</button>
+                <button class="social-btn">TELEGRAM</button>
+                <button class="social-btn">GOOGLE</button>
+                <button class="social-btn">ANOTHER</button>
+                <p class="social-text">Войти с помощью</p>
+            </div>
+        </main>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+
+</body>
+</html>
